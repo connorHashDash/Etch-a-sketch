@@ -1,10 +1,15 @@
 const masterDiv = document.querySelector('#grid-master');
+const reset = document.querySelector('#reset')
+const changeRes = document.querySelector('#changeRes')
 let gridInput = 16;
-let gridSize = gridInput * gridInput   ;
 
 
 //const gridAmount = prompt('Amount of rows and columns?')
-for (i = 0; i < gridSize; ++i){
+function makegrid(x){
+let gridSize = x * x - 1;
+    masterDiv.style.gridTemplateColumns =`repeat(${x}, 1fr)`
+    masterDiv.style.gridTemplateRows =`repeat(${x}, 1fr)`
+for (i = 0; i <= gridSize; ++i){
     let gridDiv = document.createElement('div')
     gridDiv.className = 'gridDivs'
     masterDiv.appendChild(gridDiv)
@@ -12,6 +17,36 @@ for (i = 0; i < gridSize; ++i){
         this.style.backgroundColor = 'black';
     });
 }
+}
+
+function clearGrid(x){
+    let gridSize = x * x;
+    for(j = 0; j <= gridSize; ++j){
+        if (masterDiv.childNodes.length >= 0){
+        masterDiv.removeChild(masterDiv.childNodes[0])
+        } else {
+            return;
+        }
+}
+}
+
+
+changeRes.addEventListener('click', function(){
+    clearGrid(gridInput);
+    gridInput = prompt('please select new resolution please put within 1 - 64 range')
+    if (gridInput > 64 || gridInput < 1)  {
+        alert('Out of Range')
+        return
+    }
+    makegrid(gridInput)
+});
+
+makegrid(gridInput)
+
+
+
+
+
 
 
 

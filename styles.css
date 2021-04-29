@@ -2,9 +2,24 @@
   margin: 0;
 }
 
-body{
+.buttons{
+  display: flex;
+  justify-content: center;
+}
+
+#changeRes{
+  background-color: aqua;
+  border: 0;
+  border-radius: 30px;
+  padding: 16px;
+  transition: all, ease, 0.3s, ;
+}
+
+#changeRes:hover{
+  background-color: rgba(0, 255, 255, 0.534);
 
 }
+
 
 div.main{
   display: flex;
@@ -15,11 +30,12 @@ div.main{
 
 #grid-master{
   display: grid;
-
+  max-width: 500px;
+  min-width: 500px;
+  max-height: 500px;
+  min-height: 500px;
   align-items: center;
   justify-content: center;
-  grid-template-columns: repeat(16, 25px);
-  grid-template-rows: repeat(16, 25px); 
   border: 9px solid black;
   border-radius: 10px ;
 }
@@ -27,5 +43,6 @@ div.main{
 .gridDivs{
   display: flex;
   height: 100%;
+  width: 100%;
   border: 1px solid black; 
 }
