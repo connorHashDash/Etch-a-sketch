@@ -1,0 +1,31 @@
+*{
+  margin: 0;
+}
+
+body{
+
+}
+
+div.main{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+}
+
+#grid-master{
+  display: grid;
+
+  align-items: center;
+  justify-content: center;
+  grid-template-columns: repeat(16, 25px);
+  grid-template-rows: repeat(16, 25px); 
+  border: 9px solid black;
+  border-radius: 10px ;
+}
+
+.gridDivs{
+  display: flex;
+  height: 100%;
+  border: 1px solid black; 
+}
