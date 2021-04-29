@@ -29,6 +29,7 @@ div.main{
 }
 
 #grid-master{
+  padding-top: 1px;
   display: grid;
   max-width: 500px;
   min-width: 500px;
