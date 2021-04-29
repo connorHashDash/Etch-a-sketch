@@ -4,19 +4,49 @@
 
 .buttons{
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  max-width: 700px;
+  margin: auto;
+}
+
+#reset{
+  background-color: red;
+  border: 0;
+  border-radius: 30px;
+  color: white;
+  padding: 16px;
+  padding-left: 25px;
+  padding-right: 25px;
+  transition: all, ease, 0.3s, ;
+  font-family: arial;
+  font-size: 1.4rem;
+}
+
+#reset:hover{
+  background-color: rgba(255, 0, 0, 0.555);
+}
+
+.splitter{
+  width: 20px;
 }
 
 #changeRes{
-  background-color: aqua;
+  background-color: red;
+  font-family: arial;
+  font-size: 1.4rem;
+  color: white;
   border: 0;
   border-radius: 30px;
   padding: 16px;
+  padding-left: 25px;
+  padding-right: 25px;
   transition: all, ease, 0.3s, ;
 }
 
 #changeRes:hover{
-  background-color: rgba(0, 255, 255, 0.534);
+  background-color: rgba(255, 0, 0, 0.555);
 
 }
 
@@ -25,11 +55,10 @@ div.main{
   display: flex;
   align-items: center;
   justify-content: center;
-  min-height: 100vh;
+  min-height: 75vh;
 }
 
 #grid-master{
-  padding-top: 1px;
   display: grid;
   max-width: 500px;
   min-width: 500px;
@@ -37,7 +66,7 @@ div.main{
   min-height: 500px;
   align-items: center;
   justify-content: center;
-  border: 9px solid black;
+  border: 10px solid black;
   border-radius: 10px ;
 }
 

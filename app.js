@@ -20,16 +20,8 @@ for (i = 0; i <= gridSize; ++i){
 }
 
 function clearGrid(x){
-    let gridSize = x * x;
-    for(j = 0; j <= gridSize - 1; ++j){
-        if (masterDiv.childNodes.length >= 0){
-        masterDiv.removeChild(masterDiv.childNodes[0])
-        } else {
-            return;
-        }
+    masterDiv.innerHTML = ''
 }
-}
-
 
 changeRes.addEventListener('click', function(){
     clearGrid(gridInput);
@@ -38,6 +30,11 @@ changeRes.addEventListener('click', function(){
         alert('Out of Range');
         return;
     }
+    makegrid(gridInput)
+});
+
+reset.addEventListener('click', function(){
+    clearGrid(gridInput);
     makegrid(gridInput)
 });
 
